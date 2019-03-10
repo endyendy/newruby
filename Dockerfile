@@ -44,6 +44,13 @@ COPY ./root/ /
 # Drop the root user and make the content of /opt/app-root owned by user 1001
 RUN chown -R 1001:0 ${APP_ROOT} && chmod -R ug+rwx ${APP_ROOT} && \
     rpm-file-permissions
+
+## incert 20190310
+RUN yum install -y git
+RUN git clone https://github.com/endyendy/imagemagickrpm.git
+RUN yum localinstall -y ./imagemagickrpm/*.rpm
+## incert 20190310
+
 USER 1001
 # Set the default CMD to print the usage of the language image
 CMD $STI_SCRIPTS_PATH/usage
