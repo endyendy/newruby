@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhscl/ruby-25-rhel7:latest
+FROM ruby:latest
 USER root
 
 RUN yum install -y git
