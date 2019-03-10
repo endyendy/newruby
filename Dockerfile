@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhscl/s2i-base-rhel7:latest
+FROM registry.access.redhat.com/rhscl/ruby-25-rhel7:latest
 # This image provides a Ruby environment you can use to run your Ruby
 # applications.
 EXPOSE 8080
